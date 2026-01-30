@@ -72,6 +72,11 @@ header a {
     border-bottom: 1px solid #3a3a3a;
 }
 
+#menu a:hover {
+    color: #ffffff;
+    background-color: #3a3a3a;
+}
+
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
