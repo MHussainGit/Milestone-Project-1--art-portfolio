@@ -149,45 +149,67 @@ footer ul {
     font-size: 80%;
 }
 /* Commission form styles */
-form {
-    max-width: 600px;
-    margin: 0 auto;
+section {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    gap: 1rem;
-}   
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+/* Section heading */
+section h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Form layout */
+form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
 form label {
     font-weight: bold;
 }
-form input, form textarea, form select {
-    padding: 0.5rem;
+
+/* Inputs */
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
 }
+
+/* Textarea height */
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Button alignment */
 form button {
-    align-self: flex-start;
-    padding: 0.75rem 1.5rem;
+    align-self: center;
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
     background-color: #3a3a3a;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s;
 }
+
 form button:hover {
     background-color: #252525;
-}   
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-h2 {
-    margin-bottom: 1rem;
-    align-self: center;
-    padding: 10px;
-} 
-
