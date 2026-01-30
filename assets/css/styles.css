@@ -10,7 +10,8 @@
 
 /* General styles */
 body {
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
     /* Generic project styles */
@@ -18,7 +19,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -36,9 +39,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #8da4b8;
     box-shadow: 0 2px 2px rgba(58, 58, 58, 0.15);
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -47,39 +50,88 @@ header {
 
 header a {
     text-decoration: none;
-    color: #3a3a3a;     
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    color: inherit;
 }
 
-nav ul {
-    list-style: none;
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    padding: 1rem 0;
+    padding-bottom: 0;
+    list-style-type:none;
     display: flex;
-    gap: 1rem;
-    border-radius: 5px;
+    flex-direction: column;
+    background-color: #8da4b8;
 }
 
-nav a:hover,
-nav a.active {
-    background-color: #3a3a3a;
-    color: #ffffff;
-    border-radius: 5px;
+#menu > li {
+    margin-bottom: 1em;
 }
 
-/* Main content */
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #8da4b8;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/* Main */
 main {
     flex: 1;
-    margin-top: 4rem; /* To avoid content being hidden behind the fixed header */
-    padding: 1rem;
-} 
+    background-color: #8da4b8; 
+}
+
+/* Hero section */
+#hero {
+    height: 100vh;
+    width: 100%;
+    background: url("../images/Simba3.png") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* To avoid overlap with fixed header */
+    padding-bottom: 50px; /* To avoid overlap with fixed footer */
+    box-sizing: border-box;
+}
 
 /* Footer */
-footer {    
-    background-color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    box-shadow: 0 -2px 2px #3a3a3a;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #b2d0e9;
+    box-shadow: 0 4px 4px rgba(58, 58, 58, 0.15);
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
@@ -96,71 +148,36 @@ footer ul {
     margin: 0.5rem 0 0 0;
 }
 
-/* Button styles */
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #3a3a3a;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}   
-
-.btn:hover {
-    background-color: #252525;
-    color: #ffffff;
-}   
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}           
-
-/* Hero section */
-#hero {
-    height: 600px;
-    width: 100%;
-    background: url("../images/Simba3.png") no-repeat center center/cover;
-    position: relative;
-    display: flex;
-    justify-content: center;    
-    align-items: center;
-}
-
+/* Cover text styles */
 #cover-text {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    /* Final rgba value sets the opacity so it is semi-transparent */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
     background-color: rgba(28, 41, 79, 0.845);
     font-size: 130%;
-    padding: 40px 20px;
+    padding: 10px 10px;
     text-align: center;
     min-width: 60%;
     max-width: 80%;
     border-radius: 10px;
 }
-
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
     margin: 0.5rem 0;
 }
-#cover-text > h3 {
+#cover-text>h3 {
     font-weight: normal;
     font-size: 80%;
 }
-/* Commission form styles */
+
+/* Form styles */
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 8rem 1rem;
 }
 
 /* Section heading */
@@ -175,19 +192,19 @@ form {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    padding: 2rem;
+    gap: 0.75rem;
+    padding: 1rem;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Labels */
+/* Form Labels */
 form label {
     font-weight: bold;
 }
 
-/* Inputs */
+/* Form Inputs */
 form input,
 form textarea,
 form select {
@@ -198,13 +215,13 @@ form select {
     font-size: 1rem;
 }
 
-/* Textarea height */
+/* Form Textarea */
 form textarea {
     min-height: 150px;
     resize: vertical;
 }
 
-/* Button alignment */
+/* Form Button alignment */
 form button {
     align-self: center;
     margin-top: 1rem;
@@ -219,4 +236,56 @@ form button {
 
 form button:hover {
     background-color: #252525;
+}
+
+/* Media Queries for responsiveness */
+/* Media Query for Mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 0.76rem 1rem;
+    }
+    #hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    #cover-text {
+        font-size: 100%;
+        min-width: 80%;
+        max-width: 90%;
+    }
+    footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+/* Media Query for Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    #cover-text {
+        font-size: 115%;
+    }
+    form {
+        padding: 2rem;
+    }
+    footer {
+        padding: 1rem 2rem;
+    }
+}
+/* Media Query for Desktops */
+@media (min-width: 901px) {
+    header {
+        padding: 1rem 3rem;
+    }
+    #cover-text {
+        font-size: 130%;
+    }
+    form {
+        padding: 2rem 3rem;
+    }
+    footer {
+        padding: 1rem 3rem;
+    }
 }
