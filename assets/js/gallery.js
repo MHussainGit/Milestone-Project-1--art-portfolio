@@ -62,27 +62,27 @@
             startAutoplay();
         });
 
-        // Pause autoplay on hover
+        // Pause autoplay on hover and add touch/swipe support (guarded)
         const slideshow = document.querySelector('.slideshow');
-        if (slideshow) {
-            slideshow.addEventListener('mouseenter', stopAutoplay);
-            slideshow.addEventListener('mouseleave', startAutoplay);
-        }
-
-        // Touch/swipe support
         let touchStartX = 0;
         let touchEndX = 0;
 
-        slideshow.addEventListener('touchstart', (e) => {
-            stopAutoplay();
-            touchStartX = e.changedTouches[0].screenX;
-        }, false);
+        if (slideshow) {
+            slideshow.addEventListener('mouseenter', stopAutoplay);
+            slideshow.addEventListener('mouseleave', startAutoplay);
 
-        slideshow.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-            startAutoplay();
-        }, false);
+            // Touch/swipe support
+            slideshow.addEventListener('touchstart', (e) => {
+                stopAutoplay();
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+
+            slideshow.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startAutoplay();
+            }, false);
+        }
 
         function handleSwipe() {
             const swipeThreshold = 50;
