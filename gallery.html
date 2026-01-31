@@ -13,7 +13,7 @@
     <title>Art Portfolio</title>
     <!-- Favicon -->
     <link rel="icon" sizes="180x180" type="image/png" href="assets/favicon/portfolio.png">
-     <!-- Stylesheet -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -30,22 +30,88 @@
         <nav>
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html"class="active">Gallery</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
                 <li><a href="commissions.html">Commissions</a></li>
-            </ul>       
+            </ul>
         </nav>
     </header>
     <!-- Main content -->
-      <main>
+    <main>
         <section id="gallery">
-            <div id="photos">
-                <!-- Example artwork images -->
-                <img src="assets/images/art1.jpg" alt="Artwork 1">
-                <img src="assets/images/art2.jpg" alt="Artwork 2">
-                <img src="assets/images/art3.jpg" alt="Artwork 3">
-                <img src="assets/images/art4.jpg" alt="Artwork 4">
-                <img src="assets/images/art5.jpg" alt="Artwork 5">
-                <img src="assets/images/art6.jpg" alt="Artwork 6">
+            <h2>Artwork Gallery</h2>
+            <div id="gallery-grid" class="slideshow-wrapper">
+                <!-- Slides -->
+                <div class="slideshow">
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide2">
+                    <input type="radio" name="slide" id="slide3">
+                    <input type="radio" name="slide" id="slide4">
+                    <input type="radio" name="slide" id="slide5">
+                    <input type="radio" name="slide" id="slide6">
+
+                    <div class="slide-container">
+                        <div class="slide-content">
+                            <img src="assets/images/Batman.png" alt="Batman">
+                        </div>
+                        <div class="slide-content">
+                            <img src="assets/images/The-Flash.png" alt="The Flash">
+                        </div>
+                        <div class="slide-content">
+                            <img src="assets/images/Wonder-Woman.png" alt="Wonder Woman">
+                        </div>
+                        <div class="slide-content">
+                            <img src="assets/images/Gwen-Stacy.png" alt="Gwen Stacy">
+                        </div>
+                        <div class="slide-content">
+                            <img src="assets/images/Daredevil.png" alt="Daredevil">
+                        </div>
+                        <div class="slide-content">
+                            <img src="assets/images/Ellie-TLOU.png" alt="Ellie from The Last of Us">
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="slide-nav">
+                        <!-- Prev button for slide 1 goes to slide 6 -->
+                        <label for="slide6" class="nav-btn nav-prev prev-1" aria-label="Previous slide">&#10094;</label>
+                        <!-- Prev buttons for other slides -->
+                        <label for="slide1" class="nav-btn nav-prev prev-2" aria-label="Previous slide">&#10094;</label>
+                        <label for="slide2" class="nav-btn nav-prev prev-3" aria-label="Previous slide">&#10094;</label>
+                        <label for="slide3" class="nav-btn nav-prev prev-4" aria-label="Previous slide">&#10094;</label>
+                        <label for="slide4" class="nav-btn nav-prev prev-5" aria-label="Previous slide">&#10094;</label>
+                        <label for="slide5" class="nav-btn nav-prev prev-6" aria-label="Previous slide">&#10094;</label>
+
+                        <!-- Next buttons -->
+                        <label for="slide2" class="nav-btn nav-next next-1" aria-label="Next slide">&#10095;</label>
+                        <label for="slide3" class="nav-btn nav-next next-2" aria-label="Next slide">&#10095;</label>
+                        <label for="slide4" class="nav-btn nav-next next-3" aria-label="Next slide">&#10095;</label>
+                        <label for="slide5" class="nav-btn nav-next next-4" aria-label="Next slide">&#10095;</label>
+                        <label for="slide6" class="nav-btn nav-next next-5" aria-label="Next slide">&#10095;</label>
+                        <label for="slide1" class="nav-btn nav-next next-6" aria-label="Next slide">&#10095;</label>
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="thumbnails">
+                    <label for="slide1" class="thumbnail">
+                        <img src="assets/images/Batman.png" alt="Batman thumbnail">
+                    </label>
+                    <label for="slide2" class="thumbnail">
+                        <img src="assets/images/The-Flash.png" alt="The Flash thumbnail">
+                    </label>
+                    <label for="slide3" class="thumbnail">
+                        <img src="assets/images/Wonder-Woman.png" alt="Wonder Woman thumbnail">
+                    </label>
+                    <label for="slide4" class="thumbnail">
+                        <img src="assets/images/Gwen-Stacy.png" alt="Gwen Stacy thumbnail">
+                    </label>
+                    <label for="slide5" class="thumbnail">
+                        <img src="assets/images/Daredevil.png" alt="Daredevil thumbnail">
+                    </label>
+                    <label for="slide6" class="thumbnail">
+                        <img src="assets/images/Ellie-TLOU.png" alt="Ellie from The Last of Us thumbnail">
+                    </label>
+                </div>
             </div>
         </section>
     </main>
@@ -60,8 +126,7 @@
             </li>
             <li>
                 <a href="https://www.instagram.com/mushy_draws" target="_blank" rel="noopener"
-                    aria-label="Visit my Instagram page (Opens in a new tab)"><i
-                        class="fa-brands fa-instagram"></i></a>
+                    aria-label="Visit my Instagram page (Opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
             </li>
         </ul>
         <p>&copy; Mustak Hussain - Art Portfolio. All rights reserved.</p>
@@ -69,6 +134,8 @@
 
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/352ee9b9c7.js" crossorigin="anonymous"></script>
+    <!-- Gallery JavaScript -->
+    <script src="assets/js/gallery.js"></script>
 </body>
 
 </html>
