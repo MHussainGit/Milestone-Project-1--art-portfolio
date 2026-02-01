@@ -383,7 +383,7 @@ input[type="radio"] {
     font-size: 1.5rem;
     border-radius: 4px;
     transition: all 0.3s ease;
-    display: none;
+    display: block;
     transform: scale(1);
 }
 
@@ -401,44 +401,18 @@ input[type="radio"] {
     order: 1;
 }
 
-/* Show active slide */
-input#slide1:checked ~ .slide-container .slide-content:nth-child(1),
-input#slide2:checked ~ .slide-container .slide-content:nth-child(2),
-input#slide3:checked ~ .slide-container .slide-content:nth-child(3),
-input#slide4:checked ~ .slide-container .slide-content:nth-child(4),
-input#slide5:checked ~ .slide-container .slide-content:nth-child(5),
-input#slide6:checked ~ .slide-container .slide-content:nth-child(6) {
+.slide-content {
+    display: none;
+    width: 100%;
+}
+
+.slide-content.active {
     display: flex !important;
 }
 
-/* Show/hide nav buttons based on active slide */
-input#slide1:checked ~ .slide-nav .prev-1,
-input#slide1:checked ~ .slide-nav .next-1 {
-    display: block;
-}
-
-input#slide2:checked ~ .slide-nav .prev-2,
-input#slide2:checked ~ .slide-nav .next-2 {
-    display: block;
-}
-
-input#slide3:checked ~ .slide-nav .prev-3,
-input#slide3:checked ~ .slide-nav .next-3 {
-    display: block;
-}
-
-input#slide4:checked ~ .slide-nav .prev-4,
-input#slide4:checked ~ .slide-nav .next-4 {
-    display: block;
-}
-
-input#slide5:checked ~ .slide-nav .prev-5,
-input#slide5:checked ~ .slide-nav .next-5 {
-    display: block;
-}
-
-input#slide6:checked ~ .slide-nav .prev-6,
-input#slide6:checked ~ .slide-nav .next-6 {
+/* Ensure nav buttons are available (JS can toggle disabled state) */
+.slide-nav .nav-prev,
+.slide-nav .nav-next {
     display: block;
 }
 
@@ -479,12 +453,7 @@ input#slide6:checked ~ .slide-nav .next-6 {
 }
 
 /* Highlight active thumbnail */
-input#slide1:checked ~ .thumbnails label[for="slide1"],
-input#slide2:checked ~ .thumbnails label[for="slide2"],
-input#slide3:checked ~ .thumbnails label[for="slide3"],
-input#slide4:checked ~ .thumbnails label[for="slide4"],
-input#slide5:checked ~ .thumbnails label[for="slide5"],
-input#slide6:checked ~ .thumbnails label[for="slide6"] {
+.thumbnail.active {
     border-color: #252525;
     box-shadow: 0 0 0 2px #8da4b8, 0 2px 8px rgba(0,0,0,0.2);
     transform: scale(1.12);

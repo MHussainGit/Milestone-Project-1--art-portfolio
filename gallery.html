@@ -40,78 +40,15 @@
         <section id="gallery">
             <h2>Artwork Gallery</h2>
             <div id="gallery-grid" class="slideshow-wrapper">
-                <!-- Slides -->
                 <div class="slideshow">
-                    <input type="radio" name="slide" id="slide1" checked>
-                    <input type="radio" name="slide" id="slide2">
-                    <input type="radio" name="slide" id="slide3">
-                    <input type="radio" name="slide" id="slide4">
-                    <input type="radio" name="slide" id="slide5">
-                    <input type="radio" name="slide" id="slide6">
-
-                    <div class="slide-container">
-                        <div class="slide-content">
-                            <img src="assets/images/Batman.png" alt="Batman">
-                        </div>
-                        <div class="slide-content">
-                            <img src="assets/images/The-Flash.png" alt="The Flash">
-                        </div>
-                        <div class="slide-content">
-                            <img src="assets/images/Wonder-Woman.png" alt="Wonder Woman">
-                        </div>
-                        <div class="slide-content">
-                            <img src="assets/images/Gwen-Stacy.png" alt="Gwen Stacy">
-                        </div>
-                        <div class="slide-content">
-                            <img src="assets/images/Daredevil.png" alt="Daredevil">
-                        </div>
-                        <div class="slide-content">
-                            <img src="assets/images/Ellie-TLOU.png" alt="Ellie from The Last of Us">
-                        </div>
-                    </div>
-
-                    <!-- Navigation buttons -->
+                    <div class="slide-container" aria-live="polite"></div>
                     <div class="slide-nav">
-                        <!-- Prev button for slide 1 goes to slide 6 -->
-                        <label for="slide6" class="nav-btn nav-prev prev-1" aria-label="Previous slide">&#10094;</label>
-                        <!-- Prev buttons for other slides -->
-                        <label for="slide1" class="nav-btn nav-prev prev-2" aria-label="Previous slide">&#10094;</label>
-                        <label for="slide2" class="nav-btn nav-prev prev-3" aria-label="Previous slide">&#10094;</label>
-                        <label for="slide3" class="nav-btn nav-prev prev-4" aria-label="Previous slide">&#10094;</label>
-                        <label for="slide4" class="nav-btn nav-prev prev-5" aria-label="Previous slide">&#10094;</label>
-                        <label for="slide5" class="nav-btn nav-prev prev-6" aria-label="Previous slide">&#10094;</label>
-
-                        <!-- Next buttons -->
-                        <label for="slide2" class="nav-btn nav-next next-1" aria-label="Next slide">&#10095;</label>
-                        <label for="slide3" class="nav-btn nav-next next-2" aria-label="Next slide">&#10095;</label>
-                        <label for="slide4" class="nav-btn nav-next next-3" aria-label="Next slide">&#10095;</label>
-                        <label for="slide5" class="nav-btn nav-next next-4" aria-label="Next slide">&#10095;</label>
-                        <label for="slide6" class="nav-btn nav-next next-5" aria-label="Next slide">&#10095;</label>
-                        <label for="slide1" class="nav-btn nav-next next-6" aria-label="Next slide">&#10095;</label>
+                        <button class="nav-btn nav-prev" aria-label="Previous slide">&#10094;</button>
+                        <button class="nav-btn nav-next" aria-label="Next slide">&#10095;</button>
                     </div>
                 </div>
 
-                <!-- Thumbnails -->
-                <div class="thumbnails">
-                    <label for="slide1" class="thumbnail">
-                        <img src="assets/images/Batman.png" alt="Batman thumbnail">
-                    </label>
-                    <label for="slide2" class="thumbnail">
-                        <img src="assets/images/The-Flash.png" alt="The Flash thumbnail">
-                    </label>
-                    <label for="slide3" class="thumbnail">
-                        <img src="assets/images/Wonder-Woman.png" alt="Wonder Woman thumbnail">
-                    </label>
-                    <label for="slide4" class="thumbnail">
-                        <img src="assets/images/Gwen-Stacy.png" alt="Gwen Stacy thumbnail">
-                    </label>
-                    <label for="slide5" class="thumbnail">
-                        <img src="assets/images/Daredevil.png" alt="Daredevil thumbnail">
-                    </label>
-                    <label for="slide6" class="thumbnail">
-                        <img src="assets/images/Ellie-TLOU.png" alt="Ellie from The Last of Us thumbnail">
-                    </label>
-                </div>
+                <div class="thumbnails" role="tablist" aria-label="Gallery thumbnails"></div>
             </div>
         </section>
     </main>
