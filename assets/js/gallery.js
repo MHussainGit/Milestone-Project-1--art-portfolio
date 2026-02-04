@@ -56,6 +56,7 @@
             const img = document.createElement('img');
             img.src = `${baseURL}/assets/images/${name}`;
             img.alt = makeAlt(name);
+            img.title = makeAlt(name);
 
             slide.appendChild(img);
             slideContainer.appendChild(slide);
@@ -68,6 +69,7 @@
             const timg = document.createElement('img');
             timg.src = `${baseURL}/assets/images/${name}`;
             timg.alt = makeAlt(name) + ' thumbnail';
+            timg.title = makeAlt(name);
             thumb.appendChild(timg);
 
             thumbsContainer.appendChild(thumb);
