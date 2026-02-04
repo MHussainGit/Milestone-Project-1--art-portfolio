@@ -1,4 +1,33 @@
 (function () {
+    /**
+     * Image Gallery/Carousel Implementation
+     * 
+     * Sources & References:
+     * - GeeksforGeeks: Automatic image sliders and autoplay carousel patterns
+     *   https://www.geeksforgeeks.org/automatic-image-slider-using-javascript/
+     *   https://www.geeksforgeeks.org/javascript/create-an-autoplay-carousel-using-html-css-and-javascript/
+     * 
+     * - CodeHim: Image carousel with thumbnails and slideshow button navigation
+     *   https://codehim.com/carousel/javascript-image-carousel-with-thumbnails/
+     *   https://codehim.com/gallery/slideshow-javascript-with-buttons/
+     * 
+     * - CSS Script: Responsive keyboard-accessible carousel patterns
+     *   https://www.cssscript.com/responsive-keyboard-accessible-image-carousel/
+     * 
+     * - CodyHouse: Slideshow component design patterns
+     *   https://codyhouse.co/ds/components/info/slideshow
+     * 
+     * - Stack Overflow: Touch image slider and keyboard navigation
+     *   https://stackoverflow.com/questions/59429425/touch-image-slider-next-prev-keys-interfere-with-code-for-current-slide
+     * 
+     * - Mozilla MDN: Document Object Model API reference
+     *   https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+     * 
+     * Features implemented: auto-play with delay, previous/next navigation, 
+     * thumbnail selection, keyboard controls (arrow keys), touch/swipe support,
+     * and hover-based autoplay pause/resume.
+     */
+
     // List of images in assets/images (relative to project root)
     const IMAGES = [
         'All-Might.webp',
