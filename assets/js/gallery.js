@@ -42,7 +42,16 @@
     const prevBtn = document.querySelector('.nav-prev');
     const nextBtn = document.querySelector('.nav-next');
 
+    // Custom alt text mappings for specific images
+    const customAltText = {
+        'Simba3.webp': 'The Lion King',
+        'Spider-Man-2.webp': 'Spider Man Brand New Day'
+    };
+
     function makeAlt(filename) {
+        if (customAltText[filename]) {
+            return customAltText[filename];
+        }
         return filename.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
     }
 
