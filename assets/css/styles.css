@@ -112,8 +112,11 @@ main {
 #hero {
     height: 100vh;
     width: 100%;
-    background: url("../images/Simba3.webp") no-repeat center center;
-    background-size: cover;
+    /* Try GitHub Pages absolute repo path first, then local relative fallback */
+    background-image: url('/Milestone-Project-1--art-portfolio/assets/images/Simba3.webp'), url('../images/Simba3.webp');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
     position: relative;
     display: flex;
     justify-content: center;
