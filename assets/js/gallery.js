@@ -1,36 +1,41 @@
 (function () {
     // List of images in assets/images (relative to project root)
     const IMAGES = [
-        'All-Might.png',
-        'Ballerina.png',
-        'Batman.png',
-        'Daredevil.png',
-        'Ellie-TLOU.png',
-        'Fruits-Basket.png',
-        'Godzilla.png',
-        'Goku-KSI.png',
-        'Gwen-Stacy.png',
-        'Hayao-Miyazaki.png',
-        'Ichigo.png',
-        'Lois-Superman.png',
-        'Luffy.png',
-        'Naruto.png',
-        'Ryu.png',
-        'Shonen-Jump.png',
-        'Simba3.png',
-        'Spider-Man-2.png',
-        'Spider-Man.png',
-        'Tessa-Thompson.png',
-        'The-Flash.png',
-        'Tokyo-Revengers.png',
-        'Wolverine.png',
-        'Wonder-Woman.png',
-        'Zendaya.png'
+        'All-Might.webp',
+        'Ballerina.webp',
+        'Batman.webp',
+        'Daredevil.webp',
+        'Ellie-TLOU.webp',
+        'Fruits-Basket.webp',
+        'Godzilla.webp',
+        'Goku-KSI.webp',
+        'Gwen-Stacy.webp',
+        'Hayao-Miyazaki.webp',
+        'Ichigo.webp',
+        'Lois-Superman.webp',
+        'Luffy.webp',
+        'Naruto.webp',
+        'Ryu.webp',
+        'Shonen-Jump.webp',
+        'Simba3.webp',
+        'Spider-Man-2.webp',
+        'Spider-Man.webp',
+        'Tessa-Thompson.webp',
+        'The-Flash.webp',
+        'Tokyo-Revengers.webp',
+        'Wolverine.webp',
+        'Wonder-Woman.webp',
+        'Zendaya.webp'
     ];
 
     const AUTOPLAY_DELAY = 5000;
     let autoplayInterval = null;
     let currentIndex = 0;
+
+    // Get the base URL for the project (handles both local and GitHub Pages)
+    const baseURL = window.location.pathname.includes('/Milestone-Project-1--art-portfolio') 
+        ? '/Milestone-Project-1--art-portfolio' 
+        : '';
 
     const slideContainer = document.querySelector('.slide-container');
     const thumbsContainer = document.querySelector('.thumbnails');
@@ -49,7 +54,7 @@
             slide.className = 'slide-content';
 
             const img = document.createElement('img');
-            img.src = `assets/images/${name}`;
+            img.src = `${baseURL}/assets/images/${name}`;
             img.alt = makeAlt(name);
 
             slide.appendChild(img);
@@ -61,7 +66,7 @@
             thumb.dataset.index = i;
 
             const timg = document.createElement('img');
-            timg.src = `assets/images/${name}`;
+            timg.src = `${baseURL}/assets/images/${name}`;
             timg.alt = makeAlt(name) + ' thumbnail';
             thumb.appendChild(timg);
 
