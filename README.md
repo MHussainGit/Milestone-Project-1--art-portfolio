@@ -164,13 +164,23 @@ The website wireframes were created using Balsamiq and can be viewed below.
 
 ## Screenshots
 
-### Home
-### Gallery
-### Commissions
+### Home Page
+#### ![Desktop - Home Page](<assets/images/Desktop-Screenshot-Home.png>)
+### Navigation Menu
+#### ![Desktop - Navigation Menu](<assets/images/Desktop-Screenshot-Dropdown.png>)
+### Gallery Page
+#### ![Desktop - Gallery](<assets/images/Desktop-Screenshot-Gallery.png>)
+### Commissions Page
+#### ![Desktop - Commissions Page](<assets/images/Desktop-Screenshot-Commissions.png>)
 
-### Mobile - Home
-### Mobile - Gallery
-### Mobile - Commissions
+### Mobile - Home Page
+#### ![Mobile - Home Page](<assets/images/Mobile-Screenshot-Home.png>)
+### Mobile - Navigation Menu
+#### ![Mobile - Navigation Menu](<assets/images/Mobile-Screenshot-Dropdown.png>)
+### Mobile - Gallery Page
+#### ![Mobile - Gallery](<assets/images/Mobile-Screenshot-Gallery.png>)
+### Mobile - Commissions Page
+#### ![Mobile - Commissions Page](<assets/images/Mobile-Screenshot-Commissions.png>)
 
 ## Getting Started
 ### Prerequisites
