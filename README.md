@@ -124,7 +124,7 @@ The website has been tested to ensure accessibility compliance:
 - To encourage user interaction with the gallery  
 - To provide a straightforward and accessible commission process  
 
-The design prioritises clarity and simplicity, ensuring that users can quickly locate key information while maintaining focus on the artwork itself.
+The design prioritises clarity and simplicity, ensuring that users can explore and evaluate the artwork intuitively and provides a method of contact to the artist from the site itself.
 
 ## User Stories
 
@@ -227,10 +227,6 @@ To deploy this site:
 1. **GitHub Pages**: Push to GitHub and enable GitHub Pages in repository settings
 2. **Traditional Hosting**: Upload files to any web hosting service via FTP
 
-## Fixed Issues
-- The **< a >** tag on line 52 on every page was not closed properly so added a **< /a >** tag on line 53 to close it
-- The **< main >** tag on line 39 in the Comissions page was not closed properly so added a **< /main>** tag on line 61 to close it
-
 ## Testing
 
 ### Manual Testing Procedures
@@ -275,6 +271,18 @@ All browsers displayed consistent layout and functionality.
 - All interactive elements are accessible via keyboard navigation
 - ARIA labels are used where appropriate
 - Proper heading hierarchy ensures screen reader compatibility
+
+## Fixed Issues
+- The **< a >** tag on line 52 on every page was not closed properly so added a **< /a >** tag on line 53 to close it
+- The **< main >** tag on line 39 in the Comissions page was not closed properly so added a **< /main>** tag on line 61 to close it
+
+## Future Improvements
+
+- Expand the gallery with more artwork
+- Add an artist biography section
+- Include pricing tiers for commissions
+- Add filtering or categories for gallery images
+- Improve animations and transitions for enhanced user experience
 
 ## Sources
 
