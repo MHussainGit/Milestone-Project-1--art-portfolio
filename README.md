@@ -84,11 +84,11 @@ The website includes a clear main navigation menu that is accessible across all 
 - A footer containing copyright information
 
  Each page follows a logical structure that utilises semantic HTML elements such as:
-- <header>
-- <nav>
-- <main>
-- <section>
-- <footer>
+- **<header>**
+- **<nav>**
+- **<main>**
+- **<section>**
+- **<footer>**
 
 ### Design Rationale
 The design of the website was guided by principles of usability, accessibility, and visual clarity.
