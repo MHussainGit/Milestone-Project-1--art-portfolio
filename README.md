@@ -232,8 +232,18 @@ To deploy this site:
 - The **< main >** tag on line 39 in the Comissions page was not closed properly so added a **< /main>** tag on line 61 to close it
 
 ## Testing
-### Browser Compatibility
-The website has been tested across all major browsers including Chrome, Firefox, Safari, and Microsoft Edge. The responsive design has been verified to work properly on mobile devices (both iOS and Android), tablets, and desktop computers to ensure a seamless experience across all screen sizes
+
+### Manual Testing Procedures
+
+| Feature | Action | Expected Result | Result |
+|--------|-------|---------------|--------|
+| Navigation | Click each menu link | Correct page loads | Pass |
+| Gallery autoplay | Wait for slideshow | Images change automatically | Pass |
+| Gallery controls | Click next/previous buttons | Images change accordingly | Pass |
+| Thumbnail selection | Click a thumbnail | Corresponding image is displayed | Pass |
+| Form validation | Submit empty form | Error message appears | Pass |
+| Form submission | Submit valid details | Form successfully sends request | Pass |
+| Responsiveness | Resize browser window | Layout adjusts correctly | Pass |
 
 ### Gallery Functionality
 The interactive gallery has been tested to ensure the following features work as intended:
@@ -247,6 +257,24 @@ The commission request form has been tested to validate the following:
 - **Required Fields**: All form fields are properly marked as required and prevent submission if empty
 - **Successful Submission**: Form submission works correctly with valid data
 - **Email Delivery**: Confirmation emails are successfully received via Formspree integration
+
+### Browser Compatibility
+The website was tested on:
+- Google Chrome  
+- Mozilla Firefox  
+- Microsoft Edge  
+
+All browsers displayed consistent layout and functionality.
+
+### Device Testing
+- Desktop (full screen and resized)
+- Tablet (simulated using developer tools)
+- Mobile (simulated using developer tools)
+
+### Accessibility Testing
+- All interactive elements are accessible via keyboard navigation
+- ARIA labels are used where appropriate
+- Proper heading hierarchy ensures screen reader compatibility
 
 ## Sources
 
