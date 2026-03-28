@@ -236,6 +236,21 @@ The site will be available at:
 ```
 https://username.github.io/repository-name/
 ```
+## Validation
+
+### HTML Validation
+All HTML files were tested using the W3C Markup Validation Service:
+- index.html – No errors found
+#### ![Index - Validator Result](<assets/images/index-html-validator.png>)
+- gallery.html – No errors found
+#### ![Gallery - Validator Result](<assets/images/gallery-html-validator.png>)
+- commissions.html – No errors found
+#### ![Commissions - Validator Result](<assets/images/commissions-html-validator.png>)
+
+
+### CSS Validation
+The CSS stylesheet was tested using the W3C Jigsaw CSS Validator and returned no errors.
+#### ![CSS - Validator Result](<assets/images/css-validator.png>)
 
 ## Testing
 
