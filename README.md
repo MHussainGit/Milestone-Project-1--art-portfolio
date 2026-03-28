@@ -223,9 +223,19 @@ const AUTOPLAY_DELAY = 5000; // Change this value
 Edit the footer in any HTML file to update social media URLs
 
 ## Deployment
-To deploy this site:
-1. **GitHub Pages**: Push to GitHub and enable GitHub Pages in repository settings
-2. **Traditional Hosting**: Upload files to any web hosting service via FTP
+The project is deployed using GitHub Pages.
+
+Deployment Steps:
+1. Push project files to a GitHub repository
+2. Navigate to repository settings
+3. Select Pages
+4. Choose the main branch
+5. Save settings
+
+The site will be available at:
+```
+https://username.github.io/repository-name/
+```
 
 ## Testing
 
