@@ -34,13 +34,27 @@ A responsive online art portfolio website created to showcase digital artwork an
 
 ## Project Overview
 This is an artist portfolio website designed to present my artwork to clients. The website features the following:
+
 - **Home Page**: A landing page that displays an artwork as the hero section as well as a short welcome message inviting users and outlining the function of the website
 - **Gallery Page**: An interactive gallery that automatically slides images but can also be navigated via previous & next buttons as well as by selecting thumbnails
 - **Commissions Page**: A form that features inputs for name and email addresses as well as a comment box to make a detailed request for a commission. The form is powered by Formspree.io and the request is forwarded to my account on their website; however, a copy is also forwarded as an email by the site to a dedicated email address I have set up
 - **Responsive Design**: The website dynamically adjusts to multiple device types including desktops, tablets and mobile
 - **Social Media Integration**: Icons that link to my DeviantArt page and Instagram are included in the footer of each page
 
+## Purpose and Value
+
+### Purpose
+The primary purpose of this project is to establish a professional online presence for my artwork, allowing it to be showcased in an organised and easily accessible manner.
+
+### Value to Users
+This website provides value by:
+- Allowing users to explore a curated collection of artwork via a interactive gallery
+- Offering a simple and efficient way to contact me directly for commissions 
+- Delivering a consitent and responsive experience across all devices
+- Providing easy access to social media that also showcase my artwork
+
 ## Features
+
 ### Common features for all pages
 - A header that features a website title and a hamburger button for a dropdown menu. The navigation menu gives quick access to the Home, Gallery and Commissions pages
 - A footer that includes icons that link to my social media pages and a generic license notice
@@ -59,13 +73,65 @@ This is an artist portfolio website designed to present my artwork to clients. T
 ## Design and Layout
 
 ### Navigation and Structure
-
-#### The website includes a clear main navigation menu that is accessible across all pages via the page header. It allows users to move between:
+The website includes a clear main navigation menu that is accessible across all pages via the page header. It allows users to move between:
 - Home
 - Gallery
 - Commissions
 
-#### 
+ The layout of the website has a consistent structure that includes:
+- A fixed naivgation bar in the header
+- A central main content area
+- A footer containing copyright information
+
+ Each page follows a logical structure that utilises semantic HTML elements such as:
+- <header>
+- <nav>
+- <main>
+- <section>
+- <footer>
+
+### Design Rationale
+The design of the website was guided by principles of usability, accessibility, and visual clarity.
+
+- **Layout**: A simple and consistent layout ensures that users can easily navigate the website without confusion  
+- **Navigation**: A fixed navigation system allows users to move between pages quickly and efficiently  
+- **Accessibility**: High contrast colours, alt text for images, and ARIA labels are used to support users with accessibility needs  
+- **User Experience**: Content is structured using clear headings and logical grouping, making information easy to locate  
+
+The overall design avoids unnecessary visual clutter, ensuring that the artwork remains the focal point of the website.
+
+## Accessibility
+The website has been tested to ensure accessibility compliance:
+- **Keyboard Navigation**: All interactive elements can be navigated using keyboard controls only
+- **ARIA Labels**: Proper ARIA labels are present and descriptive for screen readers
+- **Heading Hierarchy**: The document structure follows proper heading hierarchy for content organization
+- **Image Alt Text**: All images include appropriate alt text for screen reader users
+
+## User Experience (UX)
+
+### Target Audience
+- Individuals interested in digital art  
+- Potential clients seeking commissioned artwork  
+- Social media users discovering the artist’s work  
+
+### User Goals
+- To easily browse and view artwork  
+- To navigate the website without confusion  
+- To submit commission requests quickly and efficiently  
+
+### Site Goals
+- To present artwork in a clear and visually appealing format  
+- To encourage user interaction with the gallery  
+- To provide a straightforward and accessible commission process  
+
+The design prioritises clarity and simplicity, ensuring that users can quickly locate key information while maintaining focus on the artwork itself.
+
+## User Stories
+
+1. **As a visitor**, I want to browse artwork so that I can understand the artist’s style and quality  
+2. **As a potential client**, I want to submit a commission request so that I can hire the artist  
+3. **As a mobile user**, I want the website to be responsive so that I can use it comfortably on my device  
+4. **As a user**, I want clear navigation so that I can easily move between pages  
 
 ## Skeleton
 The website wireframes were created using Balsamiq and can be viewed below.
@@ -95,6 +161,16 @@ The website wireframes were created using Balsamiq and can be viewed below.
 #### ![Mobile - Gallery](<assets/images/Mobile - Gallery.webp>)
 #### Design layout for the mobile version of the commissions page
 #### ![Mobile - Commissions](<assets/images/Mobile - Commissions.webp>)
+
+## Screenshots
+
+### Home
+### Gallery
+### Commissions
+
+### Mobile - Home
+### Mobile - Gallery
+### Mobile - Commissions
 
 ## Getting Started
 ### Prerequisites
@@ -171,13 +247,6 @@ The commission request form has been tested to validate the following:
 - **Required Fields**: All form fields are properly marked as required and prevent submission if empty
 - **Successful Submission**: Form submission works correctly with valid data
 - **Email Delivery**: Confirmation emails are successfully received via Formspree integration
-
-### Accessibility Standards
-The website has been tested to ensure accessibility compliance:
-- **Keyboard Navigation**: All interactive elements can be navigated using keyboard controls only
-- **ARIA Labels**: Proper ARIA labels are present and descriptive for screen readers
-- **Heading Hierarchy**: The document structure follows proper heading hierarchy for content organization
-- **Image Alt Text**: All images include appropriate alt text for screen reader users
 
 ## Sources
 
