@@ -281,48 +281,70 @@ The CSS stylesheet was tested using the W3C Jigsaw CSS Validator and returned no
 
 ## Testing
 
-### Manual Testing Procedures
+### Manual Testing 
+Extensive manual testing was designed and implemented to assess the functionality, usability, and responsiveness of the website.
 
-| Feature | Action | Expected Result | Result |
-|--------|-------|---------------|--------|
-| Navigation | Click each menu link | Correct page loads | Pass |
-| Gallery autoplay | Wait for slideshow | Images change automatically | Pass |
-| Gallery controls | Click next/previous buttons | Images change accordingly | Pass |
-| Thumbnail selection | Click a thumbnail | Corresponding image is displayed | Pass |
-| Form validation | Submit empty form | Error message appears | Pass |
-| Form submission | Submit valid details | Form successfully sends request | Pass |
-| Responsiveness | Resize browser window | Layout adjusts correctly | Pass |
+#### Functionality Testing
+Functionality testing was conducted to ensure all interactive elements and forms work exactly as intended.
 
-### Gallery Functionality
-The interactive gallery has been tested to ensure the following features work as intended:
-- **Autoplay Feature**: Verifies that images automatically cycle through every 5 seconds
-- **Navigation Controls**: Confirms that the previous and next buttons navigate through the gallery correctly
-- **Thumbnail Selection**: Ensures that clicking on thumbnail images jumps to the correct corresponding artwork
-- **Wraparound Behavior**: Checks that the gallery wraps around properly when reaching the beginning or end of the collection
+##### Gallery Interactive Features:
+Action: Allowed the page to sit idle to test the Autoplay feature.
+Result: The images automatically cycled exactly every 5 seconds as programmed in gallery.js. (PASS)
 
-### Form Submission
-The commission request form has been tested to validate the following:
-- **Required Fields**: All form fields are properly marked as required and prevent submission if empty
-- **Successful Submission**: Form submission works correctly with valid data
-- **Email Delivery**: Confirmation emails are successfully received via Formspree integration
+Action: Clicked the 'Next' and 'Previous' arrows rapidly.
+Result: The slideshow responded immediately, pausing the autoplay timer, moving to the correct image, and wrapping around seamlessly at the beginning and end of the array. (PASS)
 
-### Browser Compatibility
-The website was tested on:
-- Google Chrome  
-- Mozilla Firefox  
-- Microsoft Edge  
+Action: Clicked random thumbnails in the gallery.
+Result: The main display instantly updated to the selected artwork, and the active border highlight jumped to the correct thumbnail. (PASS)
 
-All browsers displayed consistent layout and functionality.
+##### Commission Form & Validation:
+Action: Attempted to submit the form completely empty.
+Result: The browser prevented submission and displayed a "Please fill out this field" validation error on the Name input. (PASS)
+ADD SCREENSHOT HERE
 
-### Device Testing
-- Desktop (full screen and resized)
-- Tablet (simulated using developer tools)
-- Mobile (simulated using developer tools)
+Action: Entered a plain text string (e.g., "not-an-email") into the Email field and clicked submit.
+Result: The browser caught the invalid format and prompted the user to include an "@" symbol. (PASS)
 
-### Accessibility Testing
-- All interactive elements are accessible via keyboard navigation
-- ARIA labels are used where appropriate
-- Proper heading hierarchy ensures screen reader compatibility
+Action: Filled out all fields correctly and clicked submit.
+Result: The form successfully routed to the Formspree thank-you page, and a test email was successfully received in my designated inbox. (PASS)
+
+#### Usability & Accessibility Testing
+Usability testing was conducted to ensure the site is easy to navigate for all users, including those relying on keyboards or screen readers.
+
+##### Keyboard Navigation: 
+Action: Used the Tab key to navigate through the entire website.
+Result: All links, form inputs, form buttons, and gallery controls were accessible. The Enter key successfully activated the gallery arrows and form submission. The left and right arrow keys successfully navigated the gallery images. (PASS)
+
+##### Lighthouse Accessibility Audit:
+Action: Ran Google Chrome's Lighthouse tool to check for contrast and ARIA labels.
+Result: The site passed contrast checks. The custom JavaScript correctly assigns aria-label and alt text to every dynamically generated image in the gallery. (PASS)
+ADD SCREENSHOT HERE
+
+#### Responsiveness Testing
+Responsiveness testing was conducted using Google Chrome Developer Tools and physical devices to ensure structural integrity across all screen sizes.
+
+##### Mobile Devices (Screens < 600px):
+Action: Viewed the site on a simulated iPhone 12 Pro.
+Result: The top navigation bar cleanly collapses into a hamburger menu. The hero text scales down to 100% font size, and the form fields stack vertically. The gallery thumbnails shrink to 60x60px to fit on the screen without horizontal scrolling. (PASS)
+ADD SCREENSHOT HERE
+
+##### Tablet Devices (Screens 601px - 900px):
+Action: Viewed the site on a simulated iPad Mini.
+Result: The header padding increases to accommodate the larger screen, and the form padding expands to 2rem. The gallery thumbnails adjust to 75x75px. (PASS)
+
+##### Desktop Devices (Screens > 901px):
+Action: Viewed the site on a standard 1080p monitor.
+Result: The maximum width of the gallery and form containers (1000px and 600px respectively) prevents the content from stretching too wide, maintaining an elegant layout. (PASS)
+
+#### Browser Compatibility Matrix
+To ensure cross-platform compatibility, the live GitHub Pages deployment was manually tested across multiple modern browsers:
+
+| Browser | Layout Integrity | Gallery JS Works | Form Submission Works | Result |
+|---|---|---|---|---|
+| Google Chrome | Excellent | Yes | Yes | ✅ Pass |
+| Mozilla Firefox | Excellent | Yes | Yes | ✅ Pass |
+| Microsoft Edge | Excellent | Yes | Yes | ✅ Pass |
+| Safari (iOS) | Excellent | Yes (Swipe works) | Yes | ✅ Pass |
 
 ## Fixed Issues
 - The **< a >** tag on line 52 on every page was not closed properly so added a **< /a >** tag on line 53 to close it
