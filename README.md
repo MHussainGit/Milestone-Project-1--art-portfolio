@@ -294,6 +294,10 @@ All HTML files were tested using the W3C Markup Validation Service:
 The CSS stylesheet was tested using the W3C Jigsaw CSS Validator and returned no errors.
 #### ![CSS - Validator Result](<assets/images/css-validator.png>)
 
+### Javascript Validation
+The app.js file was tested using the JSLINT tool and was returned with no errors.
+#### ![JS - Validator Result](<assets/images/jslint-js-validator.png>)
+
 ## Testing
 
 ### Manual Testing 

@@ -1,60 +1,63 @@
 (function () {
     /**
      * Image Gallery/Carousel Implementation
-     * 
+     *
      * Sources & References:
      * - GeeksforGeeks: Automatic image sliders and autoplay carousel patterns
-     *   https://www.geeksforgeeks.org/automatic-image-slider-using-javascript/
-     *   https://www.geeksforgeeks.org/javascript/create-an-autoplay-carousel-using-html-css-and-javascript/
-     * 
+     * https://www.geeksforgeeks.org/automatic-image-slider-using-javascript/
+     * https://www.geeksforgeeks.org/javascript/create-an-autoplay-carousel-
+     * using-html-css-and-javascript/
+     *
      * - CodeHim: Image carousel with thumbnails and slideshow button navigation
-     *   https://codehim.com/carousel/javascript-image-carousel-with-thumbnails/
-     *   https://codehim.com/gallery/slideshow-javascript-with-buttons/
-     * 
+     * https://codehim.com/carousel/javascript-image-carousel-with-thumbnails/
+     * https://codehim.com/gallery/slideshow-javascript-with-buttons/
+     *
      * - CSS Script: Responsive keyboard-accessible carousel patterns
-     *   https://www.cssscript.com/responsive-keyboard-accessible-image-carousel/
-     * 
+     * https://www.cssscript.com/responsive-keyboard-accessible-image-
+     * carousel/
+     *
      * - CodyHouse: Slideshow component design patterns
-     *   https://codyhouse.co/ds/components/info/slideshow
-     * 
+     * https://codyhouse.co/ds/components/info/slideshow
+     *
      * - Stack Overflow: Touch image slider and keyboard navigation
-     *   https://stackoverflow.com/questions/59429425/touch-image-slider-next-prev-keys-interfere-with-code-for-current-slide
-     * 
+     * https://stackoverflow.com/questions/59429425/touch-image-slider-next-
+     * prev-keys-interfere-with-code-for-current-slide
+     *
      * - Mozilla MDN: Document Object Model API reference
-     *   https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
-     * 
-     * Features implemented: auto-play with delay, previous/next navigation, 
+     * https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+     *
+     * Features implemented: auto-play with delay, previous/next navigation,
      * thumbnail selection, keyboard controls (arrow keys), touch/swipe support,
      * and hover-based autoplay pause/resume.
      */
 
     // List of images in assets/images (relative to project root)
     const IMAGES = [
-        'All-Might.webp',
-        'Ballerina.webp',
-        'Batman.webp',
-        'Daredevil.webp',
-        'Ellie-TLOU.webp',
-        'Fruits-Basket.webp',
-        'Godzilla.webp',
-        'Goku-KSI.webp',
-        'Gwen-Stacy.webp',
-        'Hayao-Miyazaki.webp',
-        'Ichigo.webp',
-        'Lois-Superman.webp',
-        'Luffy.webp',
-        'Naruto.webp',
-        'Ryu.webp',
-        'Shonen-Jump.webp',
-        'Simba3.webp',
-        'Spider-Man-2.webp',
-        'Spider-Man.webp',
-        'Tessa-Thompson.webp',
-        'The-Flash.webp',
-        'Tokyo-Revengers.webp',
-        'Wolverine.webp',
-        'Wonder-Woman.webp',
-        'Zendaya.webp'
+        "All-Might.webp",
+        "Ballerina.webp",
+        "Batman.webp",
+        "Daredevil.webp",
+        "Ellie-TLOU.webp",
+        "Fruits-Basket.webp",
+        "Godzilla.webp",
+        "Goku-KSI.webp",
+        "Gwen-Stacy.webp",
+        "Hayao-Miyazaki.webp",
+        "Ichigo.webp",
+        "Lois-Superman.webp",
+        "Luffy.webp",
+        "Naruto.webp",
+        "Ryu.webp",
+        "Shonen-Jump.webp",
+        "Simba3.webp",
+        "Spider-Man-2.webp",
+        "Spider-Man.webp",
+        "Tessa-Thompson.webp",
+        "The-Flash.webp",
+        "Tokyo-Revengers.webp",
+        "Wolverine.webp",
+        "Wonder-Woman.webp",
+        "Zendaya.webp"
     ];
 
     const AUTOPLAY_DELAY = 5000;
@@ -62,36 +65,40 @@
     let currentIndex = 0;
 
     // Get the base URL for the project (handles both local and GitHub Pages)
-    const baseURL = window.location.pathname.includes('/Milestone-Project-1--art-portfolio') 
-        ? '/Milestone-Project-1--art-portfolio' 
-        : '';
+    const baseURL = (
+        window.location.pathname.includes("/Milestone-Project-1--art-portfolio")
+        ? "/Milestone-Project-1--art-portfolio"
+        : ""
+    );
 
-    const slideContainer = document.querySelector('.slide-container');
-    const thumbsContainer = document.querySelector('.thumbnails');
-    const prevBtn = document.querySelector('.nav-prev');
-    const nextBtn = document.querySelector('.nav-next');
+    const slideContainer = document.querySelector(".slide-container");
+    const thumbsContainer = document.querySelector(".thumbnails");
+    const prevBtn = document.querySelector(".nav-prev");
+    const nextBtn = document.querySelector(".nav-next");
 
     // Custom alt text mappings for specific images
     const customAltText = {
-        'Simba3.webp': 'The Lion King',
-        'Spider-Man-2.webp': 'Spider Man Brand New Day'
+        "Simba3.webp": "The Lion King",
+        "Spider-Man-2.webp": "Spider Man Brand New Day"
     };
 
     function makeAlt(filename) {
         if (customAltText[filename]) {
             return customAltText[filename];
         }
-        return filename.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+        return filename.replace(/\.[^.]+$/, "").replace(/[\-_]/g, " ");
     }
 
     function buildGallery() {
-        if (!slideContainer || !thumbsContainer) return;
+        if (!slideContainer || !thumbsContainer) {
+            return;
+        }
 
-        IMAGES.forEach((name, i) => {
-            const slide = document.createElement('div');
-            slide.className = 'slide-content';
+        IMAGES.forEach(function (name, i) {
+            const slide = document.createElement("div");
+            slide.className = "slide-content";
 
-            const img = document.createElement('img');
+            const img = document.createElement("img");
             img.src = `${baseURL}/assets/images/${name}`;
             img.alt = makeAlt(name);
             img.title = makeAlt(name);
@@ -99,14 +106,14 @@
             slide.appendChild(img);
             slideContainer.appendChild(slide);
 
-            const thumb = document.createElement('button');
-            thumb.className = 'thumbnail';
-            thumb.setAttribute('aria-label', `View ${makeAlt(name)}`);
+            const thumb = document.createElement("button");
+            thumb.className = "thumbnail";
+            thumb.setAttribute("aria-label", `View ${makeAlt(name)}`);
             thumb.dataset.index = i;
 
-            const timg = document.createElement('img');
+            const timg = document.createElement("img");
             timg.src = `${baseURL}/assets/images/${name}`;
-            timg.alt = makeAlt(name) + ' thumbnail';
+            timg.alt = makeAlt(name) + " thumbnail";
             timg.title = makeAlt(name);
             thumb.appendChild(timg);
 
@@ -115,11 +122,15 @@
     }
 
     function updateActive() {
-        const slides = slideContainer.querySelectorAll('.slide-content');
-        const thumbs = thumbsContainer.querySelectorAll('.thumbnail');
+        const slides = slideContainer.querySelectorAll(".slide-content");
+        const thumbs = thumbsContainer.querySelectorAll(".thumbnail");
 
-        slides.forEach((s, idx) => s.classList.toggle('active', idx === currentIndex));
-        thumbs.forEach((t, idx) => t.classList.toggle('active', idx === currentIndex));
+        slides.forEach(function (s, idx) {
+            s.classList.toggle("active", idx === currentIndex);
+        });
+        thumbs.forEach(function (t, idx) {
+            t.classList.toggle("active", idx === currentIndex);
+        });
     }
 
     function setSlide(index) {
@@ -150,44 +161,79 @@
 
     function addListeners() {
         // Thumbnails click
-        thumbsContainer.addEventListener('click', (e) => {
-            const btn = e.target.closest('.thumbnail');
-            if (!btn) return;
+        thumbsContainer.addEventListener("click", function (e) {
+            const btn = e.target.closest(".thumbnail");
+            if (!btn) {
+                return;
+            }
             stopAutoplay();
             setSlide(Number(btn.dataset.index));
             startAutoplay();
         });
 
         // Prev/Next
-        prevBtn && prevBtn.addEventListener('click', () => { stopAutoplay(); prevSlide(); startAutoplay(); });
-        nextBtn && nextBtn.addEventListener('click', () => { stopAutoplay(); nextSlide(); startAutoplay(); });
+        if (prevBtn) {
+            prevBtn.addEventListener("click", function () {
+                stopAutoplay();
+                prevSlide();
+                startAutoplay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener("click", function () {
+                stopAutoplay();
+                nextSlide();
+                startAutoplay();
+            });
+        }
 
         // Keyboard
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') { stopAutoplay(); prevSlide(); startAutoplay(); }
-            if (e.key === 'ArrowRight') { stopAutoplay(); nextSlide(); startAutoplay(); }
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowLeft") {
+                stopAutoplay();
+                prevSlide();
+                startAutoplay();
+            }
+            if (e.key === "ArrowRight") {
+                stopAutoplay();
+                nextSlide();
+                startAutoplay();
+            }
         });
 
         // Hover pause
-        const slideshow = document.querySelector('.slideshow');
+        const slideshow = document.querySelector(".slideshow");
         if (slideshow) {
-            slideshow.addEventListener('mouseenter', stopAutoplay);
-            slideshow.addEventListener('mouseleave', startAutoplay);
+            slideshow.addEventListener("mouseenter", stopAutoplay);
+            slideshow.addEventListener("mouseleave", startAutoplay);
         }
 
         // Touch swipe
         let touchStartX = 0;
         let touchEndX = 0;
         if (slideshow) {
-            slideshow.addEventListener('touchstart', (e) => { stopAutoplay(); touchStartX = e.changedTouches[0].screenX; }, { passive: true });
-            slideshow.addEventListener('touchend', (e) => { touchEndX = e.changedTouches[0].screenX; handleSwipe(); startAutoplay(); }, { passive: true });
+            slideshow.addEventListener("touchstart", function (e) {
+                stopAutoplay();
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+
+            slideshow.addEventListener("touchend", function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startAutoplay();
+            }, {passive: true});
         }
 
         function handleSwipe() {
             const diff = touchStartX - touchEndX;
             const threshold = 40;
             if (Math.abs(diff) > threshold) {
-                if (diff > 0) nextSlide(); else prevSlide();
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
             }
         }
     }
@@ -200,6 +246,9 @@
         startAutoplay();
     }
 
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-    else init();
-})();
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
+}());
