@@ -313,15 +313,17 @@ Functionality testing was conducted to ensure all interactive elements and forms
 - Result: The main display instantly updated to the selected artwork, and the active border highlight jumped to the correct thumbnail. (PASS)
 
 #### Commission Form & Validation:
-- Action: Attempted to submit the form completely empty.
-- Result: The browser prevented submission and displayed a "Please fill out this field" validation error on the Name input. (PASS)
-ADD SCREENSHOT HERE
+##### Action: Attempted to submit the form completely empty.
+##### Result: The browser prevented submission and displayed a "Please fill out this field" validation error on the Name input. (PASS)
+##### ADD SCREENSHOT HERE
 
-- Action: Entered a plain text string (e.g., "not-an-email") into the Email field and clicked submit.
-- Result: The browser caught the invalid format and prompted the user to include an "@" symbol. (PASS)
+##### Action: Entered a plain text string (e.g., "not-an-email") into the Email field and clicked submit.
+##### Result: The browser caught the invalid format and prompted the user to include an "@" symbol. (PASS)
+##### ADD SCREENSHOT HERE
 
-- Action: Filled out all fields correctly and clicked submit.
-- Result: The form successfully routed to the Formspree thank-you page, and a test email was successfully received in my designated inbox. (PASS)
+#####  Action: Filled out all fields correctly and clicked submit.
+#####  Result: The form successfully routed to the Formspree thank-you page, and a test email was successfully received in my designated inbox. (PASS)
+##### ADD SCREENSHOT HERE
 
 #### Usability & Accessibility Testing
 Usability testing was conducted to ensure the site is easy to navigate for all users, including those relying on keyboards or screen readers.
