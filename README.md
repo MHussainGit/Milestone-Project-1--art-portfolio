@@ -359,7 +359,7 @@ Responsiveness testing was conducted using Google Chrome Developer Tools and phy
 - Action: Viewed the site on a simulated iPhone 12 Pro.
 - Result: The top navigation bar cleanly collapses into a hamburger menu. The hero text scales down to 100% font size, and the form fields stack vertically. The gallery thumbnails shrink to 60x60px to fit on the screen without horizontal scrolling. (PASS)
 ##### ![Mobile Nav Bar](<assets/images/navbar-iphone12pro.png>)
-##### ![Mobile Nav Bar Dropdown Menu](<assets/images/gallery-iphone12pro-hamburger-clicked.png>)
+##### ![Mobile Nav Bar Dropdown Menu](<assets/images/navbar-iphone12pro-hamburger-clicked.png>)
 
 #### Tablet Devices (Screens 601px - 900px):
 - Action: Viewed the site on a simulated iPad Mini.
