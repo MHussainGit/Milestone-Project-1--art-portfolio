@@ -302,54 +302,54 @@ Extensive manual testing was designed and implemented to assess the functionalit
 #### Functionality Testing
 Functionality testing was conducted to ensure all interactive elements and forms work exactly as intended.
 
-##### Gallery Interactive Features:
-Action: Allowed the page to sit idle to test the Autoplay feature.
-Result: The images automatically cycled exactly every 5 seconds as programmed in gallery.js. (PASS)
+#### Gallery Interactive Features:
+- Action: Allowed the page to sit idle to test the Autoplay feature.
+- Result: The images automatically cycled exactly every 5 seconds as programmed in gallery.js. (PASS)
 
-Action: Clicked the 'Next' and 'Previous' arrows rapidly.
-Result: The slideshow responded immediately, pausing the autoplay timer, moving to the correct image, and wrapping around seamlessly at the beginning and end of the array. (PASS)
+- Action: Clicked the 'Next' and 'Previous' arrows rapidly.
+- Result: The slideshow responded immediately, pausing the autoplay timer, moving to the correct image, and wrapping around seamlessly at the beginning and end of the array. (PASS)
 
-Action: Clicked random thumbnails in the gallery.
-Result: The main display instantly updated to the selected artwork, and the active border highlight jumped to the correct thumbnail. (PASS)
+- Action: Clicked random thumbnails in the gallery.
+- Result: The main display instantly updated to the selected artwork, and the active border highlight jumped to the correct thumbnail. (PASS)
 
-##### Commission Form & Validation:
-Action: Attempted to submit the form completely empty.
-Result: The browser prevented submission and displayed a "Please fill out this field" validation error on the Name input. (PASS)
+#### Commission Form & Validation:
+- Action: Attempted to submit the form completely empty.
+- Result: The browser prevented submission and displayed a "Please fill out this field" validation error on the Name input. (PASS)
 ADD SCREENSHOT HERE
 
-Action: Entered a plain text string (e.g., "not-an-email") into the Email field and clicked submit.
-Result: The browser caught the invalid format and prompted the user to include an "@" symbol. (PASS)
+- Action: Entered a plain text string (e.g., "not-an-email") into the Email field and clicked submit.
+- Result: The browser caught the invalid format and prompted the user to include an "@" symbol. (PASS)
 
-Action: Filled out all fields correctly and clicked submit.
-Result: The form successfully routed to the Formspree thank-you page, and a test email was successfully received in my designated inbox. (PASS)
+- Action: Filled out all fields correctly and clicked submit.
+- Result: The form successfully routed to the Formspree thank-you page, and a test email was successfully received in my designated inbox. (PASS)
 
 #### Usability & Accessibility Testing
 Usability testing was conducted to ensure the site is easy to navigate for all users, including those relying on keyboards or screen readers.
 
-##### Keyboard Navigation: 
-Action: Used the Tab key to navigate through the entire website.
-Result: All links, form inputs, form buttons, and gallery controls were accessible. The Enter key successfully activated the gallery arrows and form submission. The left and right arrow keys successfully navigated the gallery images. (PASS)
+#### Keyboard Navigation: 
+- Action: Used the Tab key to navigate through the entire website.
+- Result: All links, form inputs, form buttons, and gallery controls were accessible. The Enter key successfully activated the gallery arrows and form submission. The left and right arrow keys successfully navigated the gallery images. (PASS)
 
-##### Lighthouse Accessibility Audit:
-Action: Ran Google Chrome's Lighthouse tool to check for contrast and ARIA labels.
-Result: The site passed contrast checks. The custom JavaScript correctly assigns aria-label and alt text to every dynamically generated image in the gallery. (PASS)
+#### Lighthouse Accessibility Audit:
+- Action: Ran Google Chrome's Lighthouse tool to check for contrast and ARIA labels.
+- Result: The site passed contrast checks. The custom JavaScript correctly assigns aria-label and alt text to every dynamically generated image in the gallery. (PASS)
 ADD SCREENSHOT HERE
 
 #### Responsiveness Testing
 Responsiveness testing was conducted using Google Chrome Developer Tools and physical devices to ensure structural integrity across all screen sizes.
 
-##### Mobile Devices (Screens < 600px):
-Action: Viewed the site on a simulated iPhone 12 Pro.
-Result: The top navigation bar cleanly collapses into a hamburger menu. The hero text scales down to 100% font size, and the form fields stack vertically. The gallery thumbnails shrink to 60x60px to fit on the screen without horizontal scrolling. (PASS)
+#### Mobile Devices (Screens < 600px):
+- Action: Viewed the site on a simulated iPhone 12 Pro.
+- Result: The top navigation bar cleanly collapses into a hamburger menu. The hero text scales down to 100% font size, and the form fields stack vertically. The gallery thumbnails shrink to 60x60px to fit on the screen without horizontal scrolling. (PASS)
 ADD SCREENSHOT HERE
 
-##### Tablet Devices (Screens 601px - 900px):
-Action: Viewed the site on a simulated iPad Mini.
-Result: The header padding increases to accommodate the larger screen, and the form padding expands to 2rem. The gallery thumbnails adjust to 75x75px. (PASS)
+#### Tablet Devices (Screens 601px - 900px):
+- Action: Viewed the site on a simulated iPad Mini.
+- Result: The header padding increases to accommodate the larger screen, and the form padding expands to 2rem. The gallery thumbnails adjust to 75x75px. (PASS)
 
-##### Desktop Devices (Screens > 901px):
-Action: Viewed the site on a standard 1080p monitor.
-Result: The maximum width of the gallery and form containers (1000px and 600px respectively) prevents the content from stretching too wide, maintaining an elegant layout. (PASS)
+#### Desktop Devices (Screens > 901px):
+- Action: Viewed the site on a standard 1080p monitor.
+- Result: The maximum width of the gallery and form containers (1000px and 600px respectively) prevents the content from stretching too wide, maintaining an elegant layout. (PASS)
 
 #### Browser Compatibility Matrix
 To ensure cross-platform compatibility, the live GitHub Pages deployment was manually tested across multiple modern browsers:
