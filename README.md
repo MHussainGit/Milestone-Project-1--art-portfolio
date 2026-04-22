@@ -151,19 +151,19 @@ To ensure the site's design remained focused on the target audience, the followi
 
 - As a visitor, I want to easily browse through a gallery of artwork so that I can understand the artist’s unique style, quality, and range.
 Addressed by: The interactive JavaScript gallery, featuring auto-play functionality, manual navigation buttons, and quick-select thumbnails.
-ADD SCREENSHOT HERE
+#### ADD SCREENSHOT HERE
 
 - As a potential client, I want to find a clear and simple method to submit a commission request so that I can hire the artist for custom work.
 Addressed by: The dedicated Commissions page featuring a structured form that safely forwards requests directly to the artist's email.
-ADD SCREENSHOT HERE
+#### ADD SCREENSHOT HERE
 
 - As a mobile user, I want the website to be fully responsive so that I can view the artwork and navigate the site comfortably on my smaller device.
 Addressed by: The implementation of CSS media queries that adjust padding, font sizes, and layout structures (such as a hamburger dropdown menu) for screens under 600px.
-ADD SCREENSHOT HERE
+#### SCREENSHOT HERE
 
 -  As a user, I want clear and consistent navigation so that I can easily move between the Home, Gallery, and Commissions pages without getting lost.
 Addressed by: The fixed navigation bar present at the top of every page, complete with an "active" indicator to show the user their current location on the site.
-ADD SCREENSHOT HERE
+#### ADD SCREENSHOT HERE
 
 ## Skeleton
 The website wireframes were created using Balsamiq and can be viewed below.
@@ -316,21 +316,31 @@ Functionality testing was conducted to ensure all interactive elements and forms
 - Action: Clicked random thumbnails in the gallery.
 - Result: The main display instantly updated to the selected artwork, and the active border highlight jumped to the correct thumbnail. (PASS)
 
-#### Commission Form & Validation:
+#### Commissions Form & Validation:
 - Action: Attempted to submit the form completely empty.
 - Result: The browser prevented submission and displayed a "Please fill out this field" validation error on the Name input. (PASS)
-##### ADD SCREENSHOT HERE
+#### ![Commissions - Empty Form Validation](<assets/images/commissions-form-validation.png>)
 
 - Action: Entered a plain text string (e.g., "not-an-email") into the Email field and clicked submit.
 - Result: The browser caught the invalid format and prompted the user to include an "@" symbol. (PASS)
-##### ADD SCREENSHOT HERE
+##### ![Invalid Email Entered](<assets/images/invalid-email.png>)
 
 - Action: Filled out all fields correctly and clicked submit.
 - Result: The form successfully routed to the Formspree thank-you page, and a test email was successfully received in my designated inbox. (PASS)
-##### ADD SCREENSHOT HERE
+##### ![Formspree Submission Details](<assets/images/commissions-form-submission-details.png>)
+##### ![Formspree Submission Confirmation](<assets/images/commissions-form-submission-confirmation.png>)
+##### ![Formspree Submission Received Evidence](<assets/images/commissions-form-submission-received.png>)
 
 #### Usability & Accessibility Testing
-Usability testing was conducted to ensure the site is easy to navigate for all users, including those relying on keyboards or screen readers.
+Usability testing was conducted to ensure the site is easy to navigate for all users, including those relying on keyboards or screen readers
+
+#### Lighthouse Performance Audit:
+##### ![Lighthouse Desktop Home Page Performance](<assets/images/lighthouse-assessment-desktop-home.png>)
+##### ![Lighthouse Desktop Gallery Page Performance](<assets/images/lighthouse-assessment-desktop-gallery.png>)
+##### ![Lighthouse Desktop Comissions Page Performance](<assets/images/lighthouse-assessment-desktop-commissions.png>)
+##### ![Lighthouse Mobile Home Page Performance](<assets/images/lighthouse-assessment-mobile-home.png>)
+##### ![Lighthouse Mobile Gallery Page Performance](<assets/images/lighthouse-assessment-mobile-gallery.png>)
+##### ![Lighthouse Mobile Commissions Page Performance](<assets/images/lighthouse-assessment-mobile-commissions.png>)
 
 #### Keyboard Navigation: 
 - Action: Used the Tab key to navigate through the entire website.
@@ -339,7 +349,7 @@ Usability testing was conducted to ensure the site is easy to navigate for all u
 #### Lighthouse Accessibility Audit:
 - Action: Ran Google Chrome's Lighthouse tool to check for contrast and ARIA labels.
 - Result: The site passed contrast checks. The custom JavaScript correctly assigns aria-label and alt text to every dynamically generated image in the gallery. (PASS)
-ADD SCREENSHOT HERE
+#### ADD SCREENSHOT HERE
 
 #### Responsiveness Testing
 Responsiveness testing was conducted using Google Chrome Developer Tools and physical devices to ensure structural integrity across all screen sizes.
@@ -347,7 +357,7 @@ Responsiveness testing was conducted using Google Chrome Developer Tools and phy
 #### Mobile Devices (Screens < 600px):
 - Action: Viewed the site on a simulated iPhone 12 Pro.
 - Result: The top navigation bar cleanly collapses into a hamburger menu. The hero text scales down to 100% font size, and the form fields stack vertically. The gallery thumbnails shrink to 60x60px to fit on the screen without horizontal scrolling. (PASS)
-ADD SCREENSHOT HERE
+#### ADD SCREENSHOT HERE
 
 #### Tablet Devices (Screens 601px - 900px):
 - Action: Viewed the site on a simulated iPad Mini.
