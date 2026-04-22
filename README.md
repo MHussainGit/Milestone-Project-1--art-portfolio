@@ -59,19 +59,30 @@ This is an artist portfolio website designed to present my artwork to clients. T
 
 ## Purpose and Value
 
-### Purpose
-The primary purpose of this project is to establish a professional and centralized online presence for my digital artwork. Prior to this, artwork may have been scattered across various social media platforms; this website serves as a dedicated portfolio that allows me to present my work in a highly organised, distraction-free environment. By curating my own gallery space, I can control the narrative of my art, demonstrate my technical versatility, and provide a direct, professional avenue for clients to request custom commissions.
+### Project Rationale
+The primary purpose of this project is to transition my digital artwork from being scattered across algorithm-dependent social media platforms to a centralized, professional, and fully owned digital space. While social media is excellent for discovery, it often surrounds artwork with distracting advertisements, unrelated content, and direct messaging systems that are inefficient for handling professional business inquiries.
 
-### Value to Users
-- This website is designed with the user's convenience and enjoyment in mind, providing tangible value in several ways:
+This dedicated portfolio website solves that problem. It acts as a curated, distraction-free gallery that allows me to control the narrative of my brand, demonstrate my technical versatility, and establish a legitimate business front for accepting custom commission requests.
 
-- Frictionless Browsing: Users can explore a curated collection of high-quality artwork through an interactive, easily navigable gallery without needing to create an account or log into a third-party platform.
+### Target Audiences & Their Needs
+The website is specifically designed to cater to three distinct user groups:
 
-- Direct Communication: Potential clients are provided with a streamlined, secure commission form, eliminating the need to navigate confusing social media direct messaging systems.
+- Casual Art Fans & Followers: Users migrating from platforms like DeviantArt or Instagram who want to view high-quality artwork without the clutter of a social media feed.
 
-- Cross-Device Consistency: Whether viewing on a large desktop monitor or a mobile phone on the go, users receive a fully responsive, tailored viewing experience that does not compromise image quality or layout structure.
+- Prospective Commission Clients: Individuals or businesses looking to hire an artist for custom work, who require a clear, trustworthy, and straightforward method of communication.
 
-- Connectivity: Integrated social media links allow fans to easily follow my ongoing artistic journey on platforms like Instagram and DeviantArt.
+- Fellow Creators & Potential Employers: Peers or art directors looking for a quick, organized overview of my artistic capabilities and technical skill level.
+
+### Value to the User
+The site provides tangible value to these audiences by focusing on a frictionless, user-centric experience:
+
+- Barrier-Free Viewing: Users do not need to create an account, log in, or download an app to view the artwork. The gallery is immediately accessible as the site prioritizes the art above all else.
+
+- Streamlined Business Communication: Potential clients are provided with a secure, structured commission form. This eliminates the uncertainty of social media DMs, and gives a direct route to contact the artist behind the art they're interested in via a email-routed inquiry system.
+
+- Responsive & Accessible Design: Whether a user is browsing on a 4K desktop monitor or quickly checking a link on their smartphone during a commute, the site maintains structural integrity. It ensures that the artwork is never cropped poorly or stretched, and that accessibility standards (like screen-reader compatibility) are respected.
+
+- Connectivity: Integrated social links allow users who discover the site organically to follow my ongoing journey on their preferred platforms, bridging the gap between professional portfolio and social community.
 
 ## Features
 
