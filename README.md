@@ -61,14 +61,18 @@ This is an artist portfolio website designed to present my artwork to clients. T
 ## Purpose and Value
 
 ### Purpose
-The primary purpose of this project is to establish a professional online presence for my artwork, allowing it to be showcased in an organised and easily accessible manner.
+The primary purpose of this project is to establish a professional and centralized online presence for my digital artwork. Prior to this, artwork may have been scattered across various social media platforms; this website serves as a dedicated portfolio that allows me to present my work in a highly organised, distraction-free environment. By curating my own gallery space, I can control the narrative of my art, demonstrate my technical versatility, and provide a direct, professional avenue for clients to request custom commissions.
 
 ### Value to Users
-This website provides value by:
-- Allowing users to explore a curated collection of artwork via a interactive gallery
-- Offering a simple and efficient way to contact me directly for commissions 
-- Delivering a consitent and responsive experience across all devices
-- Providing easy access to social media that also showcase my artwork
+- This website is designed with the user's convenience and enjoyment in mind, providing tangible value in several ways:
+
+- Frictionless Browsing: Users can explore a curated collection of high-quality artwork through an interactive, easily navigable gallery without needing to create an account or log into a third-party platform.
+
+- Direct Communication: Potential clients are provided with a streamlined, secure commission form, eliminating the need to navigate confusing social media direct messaging systems.
+
+- Cross-Device Consistency: Whether viewing on a large desktop monitor or a mobile phone on the go, users receive a fully responsive, tailored viewing experience that does not compromise image quality or layout structure.
+
+- Connectivity: Integrated social media links allow fans to easily follow my ongoing artistic journey on platforms like Instagram and DeviantArt.
 
 ## Features
 
@@ -144,11 +148,23 @@ The website has been tested to ensure accessibility compliance:
 The design prioritises clarity and simplicity, ensuring that users can explore and evaluate the artwork intuitively and provides a method of contact to the artist from the site itself.
 
 ## User Stories
+To ensure the site's design remained focused on the target audience, the following user stories were utilized to guide the development of specific features:
 
-1. **As a visitor**, I want to browse artwork so that I can understand the artist’s style and quality  
-2. **As a potential client**, I want to submit a commission request so that I can hire the artist  
-3. **As a mobile user**, I want the website to be responsive so that I can use it comfortably on my device  
-4. **As a user**, I want clear navigation so that I can easily move between pages  
+- As a visitor, I want to easily browse through a gallery of artwork so that I can understand the artist’s unique style, quality, and range.
+Addressed by: The interactive JavaScript gallery, featuring auto-play functionality, manual navigation buttons, and quick-select thumbnails.
+ADD SCREENSHOT HERE
+
+- As a potential client, I want to find a clear and simple method to submit a commission request so that I can hire the artist for custom work.
+Addressed by: The dedicated Commissions page featuring a structured form that safely forwards requests directly to the artist's email.
+ADD SCREENSHOT HERE
+
+- As a mobile user, I want the website to be fully responsive so that I can view the artwork and navigate the site comfortably on my smaller device.
+Addressed by: The implementation of CSS media queries that adjust padding, font sizes, and layout structures (such as a hamburger dropdown menu) for screens under 600px.
+ADD SCREENSHOT HERE
+
+-  As a user, I want clear and consistent navigation so that I can easily move between the Home, Gallery, and Commissions pages without getting lost.
+Addressed by: The fixed navigation bar present at the top of every page, complete with an "active" indicator to show the user their current location on the site.
+ADD SCREENSHOT HERE
 
 ## Skeleton
 The website wireframes were created using Balsamiq and can be viewed below.
