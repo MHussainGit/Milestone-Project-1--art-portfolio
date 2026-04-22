@@ -93,11 +93,11 @@ The site provides tangible value to these audiences by focusing on a frictionles
 
 - Barrier-Free Viewing: Users do not need to create an account, log in, or download an app to view the artwork. The gallery is immediately accessible as the site prioritizes the art above all else.
 
-- Streamlined Business Communication: Potential clients are provided with a secure, structured commission form. This eliminates the uncertainty of social media DMs, and gives a direct route to contact the artist behind the art they're interested in via a email-routed inquiry system.
+- Streamlined Business Communication: Potential clients are provided with a structured commission form. This eliminates the uncertainty of social media DMs, and gives a direct route to contact the artist behind the art they're interested in via a email-routed inquiry system.
 
 - Responsive & Accessible Design: Whether a user is browsing on a 4K desktop monitor or quickly checking a link on their smartphone during a commute, the site maintains structural integrity. It ensures that the artwork is never cropped poorly or stretched, and that accessibility standards (like screen-reader compatibility) are respected.
 
-- Connectivity: Integrated social links allow users who discover the site organically to follow my ongoing journey on their preferred platforms, bridging the gap between professional portfolio and social community.
+- Connectivity: Integrated social links allow users who discover the site organically to follow my ongoing journey on their preferred platforms.
 
 ## Features
 
