@@ -349,7 +349,8 @@ Usability testing was conducted to ensure the site is easy to navigate for all u
 #### Lighthouse Accessibility Audit:
 - Action: Ran Google Chrome's Lighthouse tool to check for contrast and ARIA labels.
 - Result: The site passed contrast checks. The custom JavaScript correctly assigns aria-label and alt text to every dynamically generated image in the gallery. (PASS)
-#### ADD SCREENSHOT HERE
+##### ![Lighthouse Desktop Home Page Accessibility](<assets/images/lighthouse-accessibility-audit.png>)
+
 
 #### Responsiveness Testing
 Responsiveness testing was conducted using Google Chrome Developer Tools and physical devices to ensure structural integrity across all screen sizes.
