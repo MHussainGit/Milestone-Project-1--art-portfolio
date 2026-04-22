@@ -151,19 +151,19 @@ To ensure the site's design remained focused on the target audience, the followi
 
 - As a visitor, I want to easily browse through a gallery of artwork so that I can understand the artist’s unique style, quality, and range.
 Addressed by: The interactive JavaScript gallery, featuring auto-play functionality, manual navigation buttons, and quick-select thumbnails.
-#### ADD SCREENSHOT HERE
+##### ![User Stories 1](<assets/images/user-stories-1.png>)
 
 - As a potential client, I want to find a clear and simple method to submit a commission request so that I can hire the artist for custom work.
 Addressed by: The dedicated Commissions page featuring a structured form that safely forwards requests directly to the artist's email.
-#### ADD SCREENSHOT HERE
+##### ![User Stories 2](<assets/images/user-stories-2.png>)
 
 - As a mobile user, I want the website to be fully responsive so that I can view the artwork and navigate the site comfortably on my smaller device.
 Addressed by: The implementation of CSS media queries that adjust padding, font sizes, and layout structures (such as a hamburger dropdown menu) for screens under 600px.
-#### SCREENSHOT HERE
+##### ![User Stories 3](<assets/images/user-stories-3.png>)
 
 -  As a user, I want clear and consistent navigation so that I can easily move between the Home, Gallery, and Commissions pages without getting lost.
 Addressed by: The fixed navigation bar present at the top of every page, complete with an "active" indicator to show the user their current location on the site.
-#### ADD SCREENSHOT HERE
+##### ![User Stories 4](<assets/images/user-stories-4.png>)
 
 ## Skeleton
 The website wireframes were created using Balsamiq and can be viewed below.
